@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>IfLostReturnToMessage</key>
+			<string>Вы имеете доступ ко всему</string>
+			<key>PayloadDescription</key>
+			<string>Configures ownership information for a shared device</string>
+			<key>PayloadDisplayName</key>
+			<string>Lock Screen Message</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.shareddeviceconfiguration.D4CED5C7-661D-4A01-9703-3C5ABE318BE8</string>
+			<key>PayloadType</key>
+			<string>com.apple.shareddeviceconfiguration</string>
+			<key>PayloadUUID</key>
+			<string>D4CED5C7-661D-4A01-9703-3C5ABE318BE8</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Need for block and unblock applications</string>
+	<key>PayloadDisplayName</key>
+	<string>Dome Profile</string>
+	<key>PayloadIdentifier</key>
+	<string>MacBookEVHTD7.5FAB6927-E205-427D-B9E1-096364EAF937</string>
+	<key>PayloadOrganization</key>
+	<string>First</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>2EE321C4-B803-4B8E-8584-833929FD9EEF</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
