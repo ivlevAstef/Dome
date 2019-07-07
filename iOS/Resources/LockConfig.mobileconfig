@@ -5,6 +5,28 @@
 	<key>PayloadContent</key>
 	<array>
 		<dict>
+			<key>AutoFilterEnabled</key>
+			<false/>
+			<key>FilterBrowsers</key>
+			<true/>
+			<key>FilterSockets</key>
+			<true/>
+			<key>FilterType</key>
+			<string>BuiltIn</string>
+			<key>PayloadDescription</key>
+			<string>Configures content filtering settings</string>
+			<key>PayloadDisplayName</key>
+			<string>Web Content Filter</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.webcontent-filter.97390E57-A646-4DA1-8DCF-4CF0A0FF101D</string>
+			<key>PayloadType</key>
+			<string>com.apple.webcontent-filter</string>
+			<key>PayloadUUID</key>
+			<string>97390E57-A646-4DA1-8DCF-4CF0A0FF101D</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>PayloadDescription</key>
 			<string>Configures restrictions</string>
 			<key>PayloadDisplayName</key>
@@ -263,7 +285,7 @@
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>75C6F6B9-49BC-49DB-A7F2-B4688B810275</string>
+	<string>73BC2D0D-C269-4446-B1E9-FE0891D719CC</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
