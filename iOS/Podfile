@@ -1,0 +1,11 @@
+platform :ios, '10.0'
+
+use_modular_headers!
+
+target 'Dome' do
+    project 'Dome'
+
+    pod 'SnapKit'
+    pod 'Starscream'
+
+end

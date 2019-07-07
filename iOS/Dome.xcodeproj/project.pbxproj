@@ -7,25 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BA751A7922D0FA1600A8CA6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A7022D0FA1600A8CA6C /* ViewController.swift */; };
+		BA751A7922D0FA1600A8CA6C /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A7022D0FA1600A8CA6C /* InformationViewController.swift */; };
 		BA751A7A22D0FA1600A8CA6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A7122D0FA1600A8CA6C /* AppDelegate.swift */; };
 		BA751A7B22D0FA1600A8CA6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA751A7322D0FA1600A8CA6C /* Assets.xcassets */; };
 		BA751A7C22D0FA1600A8CA6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA751A7422D0FA1600A8CA6C /* LaunchScreen.storyboard */; };
-		BA751A7D22D0FA1600A8CA6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA751A7622D0FA1600A8CA6C /* Main.storyboard */; };
 		BA751A8422D0FE4A00A8CA6C /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A8322D0FE4A00A8CA6C /* Network.swift */; };
 		BA751A8622D0FFD900A8CA6C /* SafariOpenURLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A8522D0FFD900A8CA6C /* SafariOpenURLHelper.swift */; };
+		BA751A8822D1080E00A8CA6C /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A8722D1080E00A8CA6C /* NavigationController.swift */; };
+		BA751A8A22D108E000A8CA6C /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A8922D108E000A8CA6C /* Storage.swift */; };
+		BA751A8C22D10A3400A8CA6C /* AuthenticateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A8B22D10A3400A8CA6C /* AuthenticateViewController.swift */; };
+		BA751A9722D1429800A8CA6C /* CheckHaveCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = BA751A9622D1429800A8CA6C /* CheckHaveCamera.m */; };
+		BA751A9A22D1554F00A8CA6C /* LockUnlockState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A9922D1554F00A8CA6C /* LockUnlockState.swift */; };
+		BA751A9C22D16A0000A8CA6C /* UIColor+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA751A9B22D16A0000A8CA6C /* UIColor+color.swift */; };
+		E066DA974FD627BBE839548D /* libPods-Dome.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F068673565D0822856F2599E /* libPods-Dome.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2576D2892B6ED72F0C5FABAF /* Pods-Dome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dome.release.xcconfig"; path = "Target Support Files/Pods-Dome/Pods-Dome.release.xcconfig"; sourceTree = "<group>"; };
 		BA751A5A22D0F96A00A8CA6C /* Dome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dome.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA751A7022D0FA1600A8CA6C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BA751A7022D0FA1600A8CA6C /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		BA751A7122D0FA1600A8CA6C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA751A7322D0FA1600A8CA6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA751A7522D0FA1600A8CA6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BA751A7722D0FA1600A8CA6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA751A7822D0FA1600A8CA6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA751A8322D0FE4A00A8CA6C /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BA751A8522D0FFD900A8CA6C /* SafariOpenURLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariOpenURLHelper.swift; sourceTree = "<group>"; };
+		BA751A8722D1080E00A8CA6C /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		BA751A8922D108E000A8CA6C /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		BA751A8B22D10A3400A8CA6C /* AuthenticateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateViewController.swift; sourceTree = "<group>"; };
+		BA751A9422D1429800A8CA6C /* Dome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dome-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA751A9522D1429800A8CA6C /* CheckHaveCamera.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckHaveCamera.h; sourceTree = "<group>"; };
+		BA751A9622D1429800A8CA6C /* CheckHaveCamera.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckHaveCamera.m; sourceTree = "<group>"; };
+		BA751A9822D1431900A8CA6C /* MCRestrictionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCRestrictionManager.h; sourceTree = "<group>"; };
+		BA751A9922D1554F00A8CA6C /* LockUnlockState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockUnlockState.swift; sourceTree = "<group>"; };
+		BA751A9B22D16A0000A8CA6C /* UIColor+color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+color.swift"; sourceTree = "<group>"; };
+		C5DFD982B074A2545286CCF4 /* Pods-Dome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dome.debug.xcconfig"; path = "Target Support Files/Pods-Dome/Pods-Dome.debug.xcconfig"; sourceTree = "<group>"; };
+		F068673565D0822856F2599E /* libPods-Dome.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dome.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,18 +50,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E066DA974FD627BBE839548D /* libPods-Dome.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		991436CDFC69A7C9C20AF3C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C5DFD982B074A2545286CCF4 /* Pods-Dome.debug.xcconfig */,
+				2576D2892B6ED72F0C5FABAF /* Pods-Dome.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0FDC17B28113CF6DE74BD4C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F068673565D0822856F2599E /* libPods-Dome.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA751A5122D0F96A00A8CA6C = {
 			isa = PBXGroup;
 			children = (
 				BA751A6F22D0FA1600A8CA6C /* Source */,
 				BA751A7222D0FA1600A8CA6C /* Resources */,
+				991436CDFC69A7C9C20AF3C3 /* Pods */,
 				BA751A5B22D0F96A00A8CA6C /* Products */,
+				B0FDC17B28113CF6DE74BD4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,10 +96,16 @@
 		BA751A6F22D0FA1600A8CA6C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				BA751A7022D0FA1600A8CA6C /* ViewController.swift */,
+				BA751A9322D1427300A8CA6C /* ObjCCheckCamera */,
+				BA751A8B22D10A3400A8CA6C /* AuthenticateViewController.swift */,
+				BA751A7022D0FA1600A8CA6C /* InformationViewController.swift */,
 				BA751A7122D0FA1600A8CA6C /* AppDelegate.swift */,
 				BA751A8322D0FE4A00A8CA6C /* Network.swift */,
 				BA751A8522D0FFD900A8CA6C /* SafariOpenURLHelper.swift */,
+				BA751A8722D1080E00A8CA6C /* NavigationController.swift */,
+				BA751A8922D108E000A8CA6C /* Storage.swift */,
+				BA751A9922D1554F00A8CA6C /* LockUnlockState.swift */,
+				BA751A9B22D16A0000A8CA6C /* UIColor+color.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -72,10 +115,20 @@
 			children = (
 				BA751A7322D0FA1600A8CA6C /* Assets.xcassets */,
 				BA751A7422D0FA1600A8CA6C /* LaunchScreen.storyboard */,
-				BA751A7622D0FA1600A8CA6C /* Main.storyboard */,
 				BA751A7822D0FA1600A8CA6C /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		BA751A9322D1427300A8CA6C /* ObjCCheckCamera */ = {
+			isa = PBXGroup;
+			children = (
+				BA751A9822D1431900A8CA6C /* MCRestrictionManager.h */,
+				BA751A9522D1429800A8CA6C /* CheckHaveCamera.h */,
+				BA751A9622D1429800A8CA6C /* CheckHaveCamera.m */,
+				BA751A9422D1429800A8CA6C /* Dome-Bridging-Header.h */,
+			);
+			path = ObjCCheckCamera;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +138,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA751A6C22D0F96C00A8CA6C /* Build configuration list for PBXNativeTarget "Dome" */;
 			buildPhases = (
+				9201B18F03EA8FA11C0C7BE7 /* [CP] Check Pods Manifest.lock */,
 				BA751A5622D0F96A00A8CA6C /* Sources */,
 				BA751A5722D0F96A00A8CA6C /* Frameworks */,
 				BA751A5822D0F96A00A8CA6C /* Resources */,
@@ -110,6 +164,12 @@
 				TargetAttributes = {
 					BA751A5922D0F96A00A8CA6C = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,7 +196,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA751A7D22D0FA1600A8CA6C /* Main.storyboard in Resources */,
 				BA751A7B22D0FA1600A8CA6C /* Assets.xcassets in Resources */,
 				BA751A7C22D0FA1600A8CA6C /* LaunchScreen.storyboard in Resources */,
 			);
@@ -144,15 +203,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9201B18F03EA8FA11C0C7BE7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BA751A5622D0F96A00A8CA6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BA751A7A22D0FA1600A8CA6C /* AppDelegate.swift in Sources */,
-				BA751A7922D0FA1600A8CA6C /* ViewController.swift in Sources */,
+				BA751A7922D0FA1600A8CA6C /* InformationViewController.swift in Sources */,
+				BA751A8822D1080E00A8CA6C /* NavigationController.swift in Sources */,
+				BA751A9C22D16A0000A8CA6C /* UIColor+color.swift in Sources */,
+				BA751A9A22D1554F00A8CA6C /* LockUnlockState.swift in Sources */,
+				BA751A8C22D10A3400A8CA6C /* AuthenticateViewController.swift in Sources */,
+				BA751A8A22D108E000A8CA6C /* Storage.swift in Sources */,
 				BA751A8422D0FE4A00A8CA6C /* Network.swift in Sources */,
 				BA751A8622D0FFD900A8CA6C /* SafariOpenURLHelper.swift in Sources */,
+				BA751A9722D1429800A8CA6C /* CheckHaveCamera.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,14 +255,6 @@
 				BA751A7522D0FA1600A8CA6C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		BA751A7622D0FA1600A8CA6C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA751A7722D0FA1600A8CA6C /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -296,8 +378,11 @@
 		};
 		BA751A6D22D0F96C00A8CA6C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5DFD982B074A2545286CCF4 /* Pods-Dome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7V8BMGJZ4;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
@@ -308,6 +393,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sia.dome.Dome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/ObjCCheckCamera/Dome-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -315,8 +402,11 @@
 		};
 		BA751A6E22D0F96C00A8CA6C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2576D2892B6ED72F0C5FABAF /* Pods-Dome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W7V8BMGJZ4;
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
@@ -327,6 +417,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sia.dome.Dome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/ObjCCheckCamera/Dome-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

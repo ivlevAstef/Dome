@@ -5,56 +5,36 @@
 	<key>PayloadContent</key>
 	<array>
 		<dict>
-			<key>IfLostReturnToMessage</key>
-			<string>Мы вас заблокировали :)</string>
-			<key>PayloadDescription</key>
-			<string>Configures ownership information for a shared device</string>
-			<key>PayloadDisplayName</key>
-			<string>Lock Screen Message</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.shareddeviceconfiguration.7D2B3DC0-902C-43BB-BED3-E584A10D140C</string>
-			<key>PayloadType</key>
-			<string>com.apple.shareddeviceconfiguration</string>
-			<key>PayloadUUID</key>
-			<string>7D2B3DC0-902C-43BB-BED3-E584A10D140C</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>PayloadDescription</key>
 			<string>Configures restrictions</string>
 			<key>PayloadDisplayName</key>
 			<string>Restrictions</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.applicationaccess.2263D7E4-2350-4301-883C-2553249A25B9</string>
+			<string>com.apple.applicationaccess.06CCE15E-C640-4092-89E9-B657BD0DEFC3</string>
 			<key>PayloadType</key>
 			<string>com.apple.applicationaccess</string>
 			<key>PayloadUUID</key>
-			<string>2263D7E4-2350-4301-883C-2553249A25B9</string>
+			<string>06CCE15E-C640-4092-89E9-B657BD0DEFC3</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
-			<key>allowAccountModification</key>
-			<false/>
 			<key>allowActivityContinuation</key>
 			<true/>
 			<key>allowAddingGameCenterFriends</key>
 			<true/>
-			<key>allowAirDrop</key>
-			<false/>
 			<key>allowAirPlayIncomingRequests</key>
-			<false/>
+			<true/>
 			<key>allowAirPrint</key>
-			<false/>
+			<true/>
 			<key>allowAirPrintCredentialsStorage</key>
 			<true/>
 			<key>allowAirPrintiBeaconDiscovery</key>
 			<true/>
 			<key>allowAppCellularDataModification</key>
-			<false/>
+			<true/>
 			<key>allowAppInstallation</key>
-			<false/>
+			<true/>
 			<key>allowAppRemoval</key>
-			<false/>
+			<true/>
 			<key>allowAssistant</key>
 			<true/>
 			<key>allowAssistantWhileLocked</key>
@@ -64,59 +44,57 @@
 			<key>allowAutomaticAppDownloads</key>
 			<true/>
 			<key>allowBluetoothModification</key>
-			<false/>
+			<true/>
 			<key>allowBookstore</key>
 			<true/>
 			<key>allowBookstoreErotica</key>
-			<false/>
+			<true/>
 			<key>allowCamera</key>
 			<false/>
 			<key>allowCellularPlanModification</key>
-			<false/>
+			<true/>
 			<key>allowChat</key>
 			<true/>
 			<key>allowCloudBackup</key>
-			<false/>
+			<true/>
 			<key>allowCloudDocumentSync</key>
-			<false/>
-			<key>allowCloudKeychainSync</key>
-			<false/>
+			<true/>
 			<key>allowCloudPhotoLibrary</key>
 			<true/>
 			<key>allowDefinitionLookup</key>
 			<true/>
 			<key>allowDeviceNameModification</key>
-			<false/>
+			<true/>
 			<key>allowDictation</key>
 			<true/>
 			<key>allowESIMModification</key>
-			<false/>
+			<true/>
 			<key>allowEnablingRestrictions</key>
 			<true/>
 			<key>allowEnterpriseAppTrust</key>
 			<true/>
 			<key>allowEnterpriseBookBackup</key>
-			<false/>
+			<true/>
 			<key>allowEnterpriseBookMetadataSync</key>
 			<true/>
 			<key>allowEraseContentAndSettings</key>
 			<true/>
 			<key>allowExplicitContent</key>
-			<false/>
+			<true/>
 			<key>allowFingerprintForUnlock</key>
 			<true/>
 			<key>allowFingerprintModification</key>
 			<true/>
 			<key>allowGameCenter</key>
-			<false/>
+			<true/>
 			<key>allowGlobalBackgroundFetchWhenRoaming</key>
-			<false/>
+			<true/>
 			<key>allowInAppPurchases</key>
 			<true/>
 			<key>allowKeyboardShortcuts</key>
 			<true/>
 			<key>allowManagedAppsCloudSync</key>
-			<false/>
+			<true/>
 			<key>allowMultiplayerGaming</key>
 			<true/>
 			<key>allowMusicService</key>
@@ -124,43 +102,43 @@
 			<key>allowNews</key>
 			<true/>
 			<key>allowNotificationsModification</key>
-			<false/>
+			<true/>
 			<key>allowOpenFromManagedToUnmanaged</key>
 			<true/>
 			<key>allowOpenFromUnmanagedToManaged</key>
 			<true/>
 			<key>allowPairedWatch</key>
-			<false/>
+			<true/>
 			<key>allowPassbookWhileLocked</key>
 			<true/>
 			<key>allowPasscodeModification</key>
-			<false/>
+			<true/>
 			<key>allowPasswordAutoFill</key>
 			<true/>
 			<key>allowPasswordProximityRequests</key>
-			<false/>
+			<true/>
 			<key>allowPasswordSharing</key>
-			<false/>
+			<true/>
 			<key>allowPersonalHotspotModification</key>
-			<false/>
+			<true/>
 			<key>allowPhotoStream</key>
 			<true/>
 			<key>allowPredictiveKeyboard</key>
 			<true/>
 			<key>allowProximitySetupToNewDevice</key>
-			<false/>
+			<true/>
 			<key>allowRadioService</key>
 			<true/>
 			<key>allowRemoteAppPairing</key>
-			<false/>
+			<true/>
 			<key>allowRemoteScreenObservation</key>
 			<true/>
 			<key>allowSafari</key>
 			<false/>
 			<key>allowScreenShot</key>
-			<false/>
+			<true/>
 			<key>allowSharedStream</key>
-			<false/>
+			<true/>
 			<key>allowSiriServerLogging</key>
 			<true/>
 			<key>allowSpellCheck</key>
@@ -168,7 +146,7 @@
 			<key>allowSpotlightInternetResults</key>
 			<true/>
 			<key>allowSystemAppRemoval</key>
-			<false/>
+			<true/>
 			<key>allowUIAppInstallation</key>
 			<true/>
 			<key>allowUIConfigurationProfileInstallation</key>
@@ -198,7 +176,7 @@
 			<key>forceAuthenticationBeforeAutoFill</key>
 			<false/>
 			<key>forceAutomaticDateAndTime</key>
-			<true/>
+			<false/>
 			<key>forceClassroomAutomaticallyJoinClasses</key>
 			<false/>
 			<key>forceClassroomRequestPermissionToLeaveClasses</key>
@@ -236,21 +214,56 @@
 			<key>safariForceFraudWarning</key>
 			<false/>
 		</dict>
+		<dict>
+			<key>PayloadCertificateFileName</key>
+			<string>DomeLockCer.cer</string>
+			<key>PayloadContent</key>
+			<data>
+			MIIC5TCCAc2gAwIBAgIBATANBgkqhkiG9w0BAQsFADAgMREwDwYD
+			VQQDDAhEb21lTG9jazELMAkGA1UEBhMCUlUwHhcNMTkwNzA2MTkz
+			NjIxWhcNMjAwNzA1MTkzNjIxWjAgMREwDwYDVQQDDAhEb21lTG9j
+			azELMAkGA1UEBhMCUlUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
+			ggEKAoIBAQCuQbcp6e5axTHal6LIOLqt7aRHhZFWg8tkPqBX6Xiz
+			eDY4DPogYZ7e/fZzbzyZWqgcfMiLZTOGeRBm8ojVLjmP3rV7WJhP
+			5S2DaH9sF8KU0oGcql9YwxhmeNsy/OkgsK9jUlG3C5dKGzQmi9/C
+			LWAUw8JpxA+eb3uC3eOfYupCKrtzCP3eU+44onRcJ1E0T2bXWyFn
+			wzORKJp0piJ6B/HN0XZaQWbMlyPGM7iBfUw3lRQfxQqEK0Jxs33U
+			iwXQD7ZZMcdGC8ml+0jk+4lfKLbO1tOswzOEC1y7J63SPdJRDiRx
+			qNrFtDvq8E+s+V8epHBZwUFryGT5dtjn1qgDxwWtAgMBAAGjKjAo
+			MA4GA1UdDwEB/wQEAwIHgDAWBgNVHSUBAf8EDDAKBggrBgEFBQcD
+			AzANBgkqhkiG9w0BAQsFAAOCAQEAEbe8tPKGqt+/97kDFx+bk3X6
+			PSmZft4dLMyj2OCP7OFMZd0YxACDngG74NWS/y0GVsz2Rrl6z+qy
+			wf/SctcAaEPqc52fgGuiUo0tiGeDn0AQecj6TEYxX9MKfBHSAm9v
+			Tx19CPnRxghdxMlNq9KLuMI6o58NaPhxvEqCuduwnA9MWZeXq/Tj
+			SzKp8jRI1o6FmMOfd0jq6JgYcB+tN93/q4aSl0ZTwc0c6jRmzR4+
+			cSqnyUQ1xCNoYiaNnwNb4/EWkG0QweOtNQflYu+8ek706hJ6JYO/
+			wiZJ7ts9KCUmN5HrZn86AZWxjTkLPK1PhcBllKil5xi9RScqkfyc
+			49HCWQ==
+			</data>
+			<key>PayloadDescription</key>
+			<string>Adds a CA root certificate</string>
+			<key>PayloadDisplayName</key>
+			<string>DomeLock</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.root.A870C836-172B-4E2F-BFDA-C9816B8BC911</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.root</string>
+			<key>PayloadUUID</key>
+			<string>A870C836-172B-4E2F-BFDA-C9816B8BC911</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
 	</array>
-	<key>PayloadDescription</key>
-	<string>Need for block and unblock applications</string>
 	<key>PayloadDisplayName</key>
-	<string>Dome Profile</string>
+	<string>Untitled</string>
 	<key>PayloadIdentifier</key>
-	<string>MacBookEVHTD7.5FAB6927-E205-427D-B9E1-096364EAF937</string>
-	<key>PayloadOrganization</key>
-	<string>First</string>
+	<string>MacBookEVHTD7.70426470-8F98-4997-972D-1270CD278EB2</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>1FFFD948-32F7-4D6F-9D6D-528F0F5337DC</string>
+	<string>75C6F6B9-49BC-49DB-A7F2-B4688B810275</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
