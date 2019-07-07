@@ -23,20 +23,50 @@ class LockUnlockState
 
     private var updateHandler: ((_ locked: Bool) -> Void)?
 
+    private var timeInterval: (from: Date, to: Date)?
+
     init() {
-        testUpdate()
+        updater()
     }
 
     func subscribe(on update: @escaping (_ locked: Bool) -> Void) {
         self.updateHandler = update
     }
 
-    private func testUpdate() {
+    func setPolygon() {
+
+    }
+
+    func removePolygon() {
+        
+    }
+
+    func setTimeInterval(from: Date, to: Date) {
+        self.timeInterval = (from, to)
+    }
+
+    func removeTimeInterval() {
+        self.timeInterval = nil
+    }
+
+    private func updater() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 40.0) { [weak self] in
             if let self = self {
                 self.locked = !self.locked
-                self.testUpdate()
+                self.updater()
             }
+        }
+    }
+
+    private func checkTimeInterval() {
+        guard let (from, to) = self.timeInterval else {
+            return
+        }
+
+        if from < Date() && Date() < to {
+            self.locked = true
+        } else {
+            self.locked = false
         }
     }
 }

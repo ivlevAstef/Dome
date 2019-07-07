@@ -52,6 +52,7 @@ class AuthenticateViewController: UIViewController, AVCaptureMetadataOutputObjec
         qrCodeFrameView.layer.cornerRadius = 30
         qrCodeFrameView.layer.borderColor = UIColor.green.withAlphaComponent(0.5).cgColor
         qrCodeFrameView.layer.borderWidth = 8
+        qrCodeFrameView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
 
         self.view.addSubview(qrCodeFrameView)
 

@@ -16,18 +16,19 @@ class InformationViewController: UIViewController
     internal var network: Network?
     private var lockUnlockState: LockUnlockState = LockUnlockState()
 
-    private var stateView: UIView = UIView(frame: .zero)
-    private var stateLabel: UILabel = UILabel(frame: .zero)
-    private var infoView: UIView = UIView(frame: .zero)
-    private var infoTitleLabel: UILabel = UILabel(frame: .zero)
-    private var infoStatusLabel: UILabel = UILabel(frame: .zero)
+    private let stateView: UIView = UIView(frame: .zero)
+    private let stateLabel: UILabel = UILabel(frame: .zero)
+    private let stateImageView: UIImageView = UIImageView(image: nil)
+    private let infoView: UIView = UIView(frame: .zero)
+    private let infoTitleLabel: UILabel = UILabel(frame: .zero)
+    private let infoStatusLabel: UILabel = UILabel(frame: .zero)
 
-    private var infoIdView: UIView = UIView(frame: .zero)
-    private var infoIdLabel: UILabel = UILabel(frame: .zero)
-    private var infoIdNumberLabel: UILabel = UILabel(frame: .zero)
-    private var infoButtonLabel: UILabel = UILabel(frame: .zero)
+    private let infoIdView: UIView = UIView(frame: .zero)
+    private let infoIdLabel: UILabel = UILabel(frame: .zero)
+    private let infoIdNumberLabel: UILabel = UILabel(frame: .zero)
+    private let infoButtonLabel: UILabel = UILabel(frame: .zero)
 
-    private var activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
+    private let activityIndicatorView = UIActivityIndicatorView(style: .whiteLarge)
 
     private var infoIdHeightConstraint: Constraint?
     private var buttonHeightConstraint: Constraint?
@@ -59,6 +60,7 @@ class InformationViewController: UIViewController
         self.view.addSubview(self.stateView)
         self.stateView.addSubview(self.stateLabel)
         self.stateView.addSubview(self.activityIndicatorView)
+        self.stateView.addSubview(self.stateImageView)
 
         self.view.addSubview(self.infoView)
         self.infoView.addSubview(self.infoTitleLabel)
@@ -89,6 +91,10 @@ class InformationViewController: UIViewController
             maker.top.equalToSuperview().offset(80)
             maker.left.equalToSuperview().offset(16)
             maker.right.equalToSuperview().offset(-16)
+        }
+        self.stateImageView.snp.makeConstraints { maker in
+            maker.centerX.equalToSuperview()
+            maker.centerY.equalToSuperview().offset(40)
         }
         self.infoIdView.snp.makeConstraints { maker in
             maker.top.equalToSuperview().offset(24)
@@ -178,6 +184,10 @@ class InformationViewController: UIViewController
             }
         }
 
+        network?.infoChanged = { [weak self] info in
+            self?.parseInfo(info)
+        }
+
         self.realLocked = network?.locked ?? false
         network?.lockState = { [weak self] locked in
             self?.realLocked = locked
@@ -191,6 +201,10 @@ class InformationViewController: UIViewController
             self?.updateLockState()
             self?.updateInterface()
         }
+    }
+
+    private func parseInfo(_ info: [String: Any]) {
+        
     }
 
     private func updateLockState() {
@@ -225,6 +239,8 @@ class InformationViewController: UIViewController
         stateView.backgroundColor = UIColor(r: 255, g: 100, b: 20)
         stateLabel.text = "Предупреждение!\nПроизошли неполадки. Оставайтесь на месте."
 
+        stateImageView.image = UIImage(named: "RedLock")
+
         infoTitleLabel.text = "Ограничение доступа"
         infoStatusLabel.text = "АААААААА"
         infoStatusLabel.textColor = UIColor(r: 255, g: 80, b: 30)
@@ -243,6 +259,8 @@ class InformationViewController: UIViewController
 
         stateView.backgroundColor = UIColor(r: 0, g: 57, b: 0)
         stateLabel.text = "Функции вашего телефона доступны."
+
+        stateImageView.image = UIImage(named: "GreenUnlock")
 
         infoTitleLabel.text = "Ограничение доступа"
         infoStatusLabel.text = "ОТКЛЮЧЕНО"
@@ -264,6 +282,8 @@ class InformationViewController: UIViewController
         stateView.backgroundColor = UIColor(r: 88, g: 3, b: 1)
         stateLabel.text = "Функции вашего телефона ограничены.\nНо в скором времени у вас появится доступ."
 
+        stateImageView.image = UIImage(named: "RedLock")
+
         infoTitleLabel.text = "Ограничение доступа"
         infoStatusLabel.text = "ВКЛЮЧЕНО"
         infoStatusLabel.textColor = UIColor(r: 211, g: 52, b: 44)
@@ -283,6 +303,8 @@ class InformationViewController: UIViewController
         stateView.backgroundColor = UIColor(r: 88, g: 3, b: 1)
         stateLabel.text = "Внимание!\nФункции вашего телефона ограничены."
 
+        stateImageView.image = UIImage(named: "RedLock")
+
         infoTitleLabel.text = "Ограничение доступа"
         infoStatusLabel.text = "ВКЛЮЧЕНО"
         infoStatusLabel.textColor = UIColor(r: 211, g: 52, b: 44)
@@ -301,6 +323,8 @@ class InformationViewController: UIViewController
 
         stateView.backgroundColor = UIColor(r: 88, g: 57, b: 1)
         stateLabel.text = "Подождите пока мы соединимся с сервером."
+
+        stateImageView.image = nil
 
         infoTitleLabel.text = "Ограничение доступа"
         infoStatusLabel.text = "ОЖИДАНИЕ"

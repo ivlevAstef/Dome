@@ -17,6 +17,7 @@ class Network
         case connected
         case waitToken
         case waitRegister
+        case waitInfo
         case registered
     }
 
@@ -24,6 +25,7 @@ class Network
 
     var showURLHandler: ((URL) -> Void)?
     var stateChanged: ((State) -> Void)?
+    var infoChanged: ((_ info: [String: Any]) -> Void)?
     var lockState: ((_ locked: Bool) -> Void)?
 
     var locked: Bool { return CheckHaveCamera.checkHaveCamera() }
@@ -136,6 +138,11 @@ class Network
             return
         }
 
+        if dict["e"] as? String == "info" {
+            let info = [String: Any]()
+            infoChanged?(info)
+        }
+
         switch state {
         case .waitToken:
             if dict["e"] as? String == "token", let token = dict["m"] as? String {
@@ -145,8 +152,13 @@ class Network
         case .waitRegister:
             if dict["e"] as? String == "mobile", let id = dict["id"] as? Int64 {
                 sessionId = id
-                state = .registered
+                state = .waitInfo
             }
+            fallthrough
+        case .waitInfo:
+            //if dict["e"] as? String == "info" {
+                state = .registered
+            //}
         default:
             break
         }
