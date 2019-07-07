@@ -74,6 +74,7 @@ class Network
 
         print("socket url \(socketURL)")
         let socket = WebSocket(url: socketURL)
+        socket.request.timeoutInterval = 5.0
         self.socket = socket
 
         subscribeOnSocketEvents()
@@ -115,7 +116,6 @@ class Network
         case (_, .connected):
             let msg = "{ \"e\" : \"token\" }"
             socket?.write(string: msg)
-            //socket?.write(data: msg.data(using: String.Encoding.utf8)!)
 
             print("Send message: \(msg)")
             state = .waitToken

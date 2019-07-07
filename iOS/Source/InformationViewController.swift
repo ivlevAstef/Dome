@@ -36,6 +36,7 @@ class InformationViewController: UIViewController
     private var needConnect: Bool = true
     private var needLocked: Bool = false
     private var realLocked: Bool = false
+    private var disconnected: Bool = false
 
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -175,12 +176,13 @@ class InformationViewController: UIViewController
 
         network?.authenticate()
         network?.stateChanged = { [weak self] state in
-            switch state {
-            case .registered:
+            if state.rawValue >= Network.State.registered.rawValue {
+                self?.disconnected = false
                 self?.needConnect = false
                 self?.updateInterface()
-            default:
-                break
+            } else {
+                self?.disconnected = true
+                self?.updateInterface()
             }
         }
 
@@ -222,10 +224,10 @@ class InformationViewController: UIViewController
 
         if needConnect {
             self.showWaitingState()
+        } else if needLocked && (!realLocked || disconnected) {
+            self.showAlertState()
         } else if realLocked && needLocked {
             self.showLockState()
-        } else if needLocked && !realLocked {
-            self.showAlertState()
         } else if !needLocked && realLocked {
             self.showLockStateButCanUnlock()
         } else {

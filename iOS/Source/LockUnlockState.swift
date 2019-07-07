@@ -25,6 +25,8 @@ class LockUnlockState
 
     private var timeInterval: (from: Date, to: Date)?
 
+    private var testTime: Double = 20.0
+
     init() {
         updater()
     }
@@ -50,8 +52,9 @@ class LockUnlockState
     }
 
     private func updater() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 40.0) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + testTime) { [weak self] in
             if let self = self {
+                self.testTime += 10.0
                 self.locked = !self.locked
                 self.updater()
             }
