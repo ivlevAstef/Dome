@@ -107,6 +107,7 @@ public class Socket {
      * Websocket new message listener
      */
     private static OnMessageListener messageListener;
+    private static OnMessageListener dataListener;
     /**
      * Number of reconnection attempts
      */
@@ -168,12 +169,13 @@ public class Socket {
      */
     public boolean send(@NonNull String event, @NonNull String data){
         try {
-            JSONObject text = new JSONObject();
+            /*JSONObject text = new JSONObject();
             text.put("event", event);
             text.put("data", new JSONObject(data));
-            Log.v(TAG,"Try to send data "+text.toString());
-            return realWebSocket.send(text.toString());
-        } catch (JSONException e) {
+            Log.v(TAG,"Try to send data "+text.toString());*/
+            Log.v(TAG,"Try to send data "+data);
+            return realWebSocket.send(data);
+        } catch (Exception e) {
             Log.e(TAG,"Try to send data with wrong JSON format, data: "+data);
         }
         return false;
@@ -199,6 +201,10 @@ public class Socket {
         messageListener = listener;
         return this;
     }
+    public Socket setDataListener(@NonNull OnMessageListener listener) {
+        dataListener = listener;
+        return this;
+    }
 
     public void removeEventListener(@NonNull String event) {
         eventListener.remove(event);
@@ -211,6 +217,7 @@ public class Socket {
     public void clearListeners() {
         eventListener.clear();
         messageListener = null;
+        dataListener = null;
         onChangeStateListener = null;
     }
 
@@ -348,8 +355,10 @@ public class Socket {
             // call message listener
             if (messageListener != null)
                 messageListener.onMessage(Socket.this, text);
+            if (dataListener != null)
+                dataListener.onMessage(text);
 
-            try {
+            /*try {
                 // Parse message text
                 JSONObject response = new JSONObject(text);
                 String event = response.getString("event");
@@ -365,13 +374,16 @@ public class Socket {
                 }
             } catch (JSONException e) {
                 // Message text not in JSON format or don't have {event}|{data} object
-                Log.e(TAG, "Unknown message format.");
-            }
+                Log.e(TAG, "Unknown message format: " + text);
+            }*/
         }
 
         @Override
         public void onMessage(WebSocket webSocket, ByteString bytes) {
             // TODO: some action
+            if(bytes != null) {
+
+            }
         }
 
         @Override

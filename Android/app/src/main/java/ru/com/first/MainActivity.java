@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Camera;
 import android.net.ConnectivityManager;
+import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +27,8 @@ import com.google.android.gms.vision.CameraSource;
 import com.google.android.gms.vision.Detector;
 import com.google.android.gms.vision.barcode.Barcode;
 import com.google.android.gms.vision.barcode.BarcodeDetector;
+
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -70,28 +73,39 @@ public class MainActivity extends AppCompatActivity {
         }
         startService(new Intent(this, WorkingService.class));
 
-        running = false;
+        running = true;
         startQRcode();
 
         new Thread(new Runnable() {
             @Override
             public void run() {
-                if(PhoneBlockUtils.getServer() == null)
-                {
-                    //nothing
-                }
-                else {
-                    if (PhoneBlockUtils.isPhoneBlocked()) {
-                        setBlockedView();
+                while(running) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (PhoneBlockUtils.getServer() == null) {
+                                //nothing
+                            } else {
+                                if (PhoneBlockUtils.isPhoneBlocked()) {
+                                    setBlockedView();
+                                } else {
+                                    setUnblockedView();
+                                }
+                            }
+                            String id = Preferences.getString("id", null, MainActivity.this);
+                            if (id != null) {
+                                TextView blocked_id = (TextView) MainActivity.this.findViewById(R.id.blocked_id);
+                                TextView unblocked_id = (TextView) MainActivity.this.findViewById(R.id.unblocked_id);
+                                blocked_id.setText(id);
+                                unblocked_id.setText(id);
+                            }
+                        }
+                    });
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
                     }
-                    else {
-                        setUnblockedView();
-                    }
-                }
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
             }
         }).start();
@@ -158,14 +172,10 @@ public class MainActivity extends AppCompatActivity {
                     barcodeHint.post(new Runnable() {
                         @Override
                         public void run() {
-                            String code = barcodes.valueAt(0).displayValue;
-                            if (code.contains("dome|")) { //dome|AAAAAA|https://first.com.ru/ws/
-                                gotit = true;
-                                StringTokenizer st = new StringTokenizer(code, "|");
-                                String dome = st.nextToken();
-                                String name = st.nextToken();
-                                String url = st.nextToken();
-                            }
+                            String url = barcodes.valueAt(0).displayValue;
+                            if( cameraSource != null)
+                                cameraSource.stop();
+                            PhoneBlockUtils.setServer(url, MainActivity.this);
                         }
                     });
                 }

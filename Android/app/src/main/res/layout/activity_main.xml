@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="gone"
+        android:visibility="visible"
         android:background="@color/colorPrimary"
         android:id="@+id/qrcode">
 
@@ -122,7 +122,6 @@
             app:layout_constraintTop_toBottomOf="@+id/guideline_bottom" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -133,9 +132,7 @@
         android:id="@+id/usercode">
     </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/blocked"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -190,30 +187,43 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.65" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_blocked_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_blocked_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
 
         <TextView
             android:id="@+id/blocked_id_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/guideline_blocked"
+            android:layout_marginTop="20dp"
             android:text="@string/your_id"
-            android:textColor="@color/colorPrimaryDark"
             android:textAlignment="center"
-            android:layout_marginTop="40dp"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="20sp"
-            />
+            app:layout_constraintTop_toBottomOf="@id/guideline_blocked" />
 
         <TextView
             android:id="@+id/blocked_id"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/blocked_id_label"
-            android:text=""
-            android:textColor="@color/colorPrimaryDark"
-            android:textAlignment="center"
             android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryLight"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
             android:textSize="45sp"
-            />
+            app:layout_constraintLeft_toLeftOf="@id/guideline_blocked_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_blocked_right"
+            app:layout_constraintTop_toBottomOf="@id/blocked_id_label" />
 
         <TextView
             android:id="@+id/blocked_warn_label"
@@ -226,113 +236,139 @@
             android:layout_marginTop="20dp"
             android:textSize="20sp"
             />
+
         <TextView
             android:id="@+id/blocked_warn_value"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/blocked_warn_label"
+            android:layout_marginTop="10dp"
             android:text="@string/status_blocking_on"
-            android:textColor="@color/colorBlocked"
             android:textAlignment="center"
-            android:layout_marginTop="2dp"
+            android:textColor="@color/colorBlocked"
+            android:textStyle="bold"
             android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/blocked_warn_label"
             />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/unblocked"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
         android:orientation="vertical"
-        android:visibility="visible"
-        android:background="@color/colorUnblocked"
-        android:id="@+id/unblocked">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="@string/status_unblocked"
-            android:textColor="@color/colorPrimary"
-            android:textAlignment="center"
-            android:layout_marginTop="40dp"
-            android:textSize="20sp"
-            />
+        android:visibility="gone">
 
-        <ImageView
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/guideline_unlock"
-            android:src="@drawable/unlockgreen"
-            android:scaleType="fitCenter"
-            android:layout_marginBottom="40dp"
-            />
+            android:background="@color/colorUnblocked"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/guideline_unblocked"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:text="@string/status_unblocked"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                android:layout_marginTop="40dp"
+                android:textSize="20sp"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/guideline_unlock"
+                android:src="@drawable/unlockgreen"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="40dp"
+                />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_unlock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.30" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_unlock"
+            android:id="@+id/guideline_unblocked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.30" />
+            app:layout_constraintGuide_percent="0.65" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_unblocked_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_unblocked_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <TextView
+            android:id="@+id/unblocked_id_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/your_id"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/guideline_unblocked" />
+
+        <TextView
+            android:id="@+id/unblocked_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimaryLight"
+            android:text=""
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="45sp"
+            app:layout_constraintLeft_toLeftOf="@id/guideline_unblocked_left"
+            app:layout_constraintRight_toRightOf="@id/guideline_unblocked_right"
+            app:layout_constraintTop_toBottomOf="@id/unblocked_id_label" />
+
+        <TextView
+            android:id="@+id/unblocked_warn_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/unblocked_id"
+            android:text="@string/status_blocking"
+            android:textColor="@color/colorPrimaryDark"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:id="@+id/unblocked_warn_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/status_blocking_off"
+            android:textAlignment="center"
+            android:textColor="@color/colorUnblocked"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/unblocked_warn_label"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_unblocked"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.65" />
-
-    <TextView
-        android:id="@+id/unblocked_id_label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/guideline_unblocked"
-        android:text="@string/your_id"
-        android:textColor="@color/colorPrimaryDark"
-        android:textAlignment="center"
-        android:layout_marginTop="40dp"
-        android:textSize="20sp"
-        />
-
-    <TextView
-        android:id="@+id/unblocked_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/unblocked_id_label"
-        android:text=""
-        android:textColor="@color/colorPrimaryDark"
-        android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        android:textSize="45sp"
-        />
-
-    <TextView
-        android:id="@+id/unblocked_warn_label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/unblocked_id"
-        android:text="@string/status_blocking"
-        android:textColor="@color/colorPrimaryDark"
-        android:textAlignment="center"
-        android:layout_marginTop="20dp"
-        android:textSize="20sp"
-        />
-    <TextView
-        android:id="@+id/unblocked_warn_value"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/unblocked_warn_label"
-        android:text="@string/status_blocking_off"
-        android:textColor="@color/colorBlocked"
-        android:textAlignment="center"
-        android:layout_marginTop="2dp"
-        android:textSize="20sp"
-        />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </LinearLayout>

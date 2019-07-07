@@ -16,7 +16,7 @@ import okhttp3.Request;
 import okhttp3.WebSocket;
 import okio.ByteString;
 
-public class SocketConnection extends Socket.OnEventResponseListener {
+public class SocketConnection extends Socket.OnMessageListener {
     private String server = null;
     //private SSLSocket socket;
     private Context context;
@@ -31,7 +31,7 @@ public class SocketConnection extends Socket.OnEventResponseListener {
 
             socket = Socket.Builder.with("ws://"+server+":5000").build().connect();
             disconnected = false;
-            socket.onEventResponse("Some event", this);
+            socket.setDataListener(this);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -41,21 +41,6 @@ public class SocketConnection extends Socket.OnEventResponseListener {
         return false;
     }
 
-    @Override
-    public void onMessage(String event, String data) {
-        if(data != null)
-        {
-            try
-            {
-                JSONObject object = new JSONObject(data);
-                if(object != null && object.getString("e") == "mobile" && object.getString("id") != null && context != null)
-                    Preferences.putString("id", object.getString("id"), context);
-            } catch (Exception e)
-            {
-                e.printStackTrace();
-            }
-        }
-    }
 
     public void sendPhoneData() {
         if(socket == null || this.context == null)
@@ -69,5 +54,23 @@ public class SocketConnection extends Socket.OnEventResponseListener {
         }
 
         socket.send("handshake", "{\"e\":\"mobile\",\"imei\":\""+myid+"\",\"system\":\"android\",\"genkeycode\":\""+code+"\"}");
+    }
+
+    @Override
+    public void onMessage(String data) {
+        if(data != null)
+        {
+            try
+            {
+                JSONObject object = new JSONObject(data);
+                String e = object.getString("e");
+                String id = object.getString("id");
+                if(object != null && "mobile".equals(e) && id != null && context != null)
+                    Preferences.putString("id", object.getString("id"), context);
+            } catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+        }
     }
 }
