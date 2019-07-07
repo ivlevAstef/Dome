@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">КУПОЛ</string>
+    <string name="app_description">Система ограничения доступа к функциям телефона</string>
+    <string name="title_camera_permission">Разрешите воспользоваться камерой</string>
+    <string name="text_camera_permission">Приложению необходим доступ к вашей камере, чтобы сканировать QR-код.</string>
+    <string name="scan_qrcode_hint">Поднесите телефон к картинке с кодом</string>
+    <string name="action_ok">OK</string>
+    <string name="status_blocked">Внимание! Функции вашего телефона ограничены</string>
+    <string name="status_unblocked">Функции вашего телефона не ограничены</string>
+    <string name="status_blocking">Ограничение доступа</string>
+    <string name="status_blocking_on">ВКЛЮЧЕНО</string>
+    <string name="status_blocking_off">ВЫКЛЮЧЕНО</string>
+    <string name="your_id">Ваш ID</string>
+
+</resources>

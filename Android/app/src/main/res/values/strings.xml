@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DOME</string>
+    <string name="app_description">Security restrictions application</string>
+    <string name="title_camera_permission">Please allow access to camera</string>
+    <string name="text_camera_permission">Application requires access to your camera to scan QR code. Please allow access to camera.</string>
+    <string name="scan_qrcode_hint">Hover over QR-code, information would open automatically</string>
+    <string name="action_ok">OK</string>
+    <string name="status_blocked">Warning your phone is locked!</string>
+    <string name="status_unblocked">Your phone is not locked</string>
+    <string name="status_blocking">Phone lock</string>
+    <string name="status_blocking_on">Turned ON</string>
+    <string name="status_blocking_off">Turned OFF</string>
+    <string name="your_id">Your ID</string>
+
+</resources>
