@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadCertificateFileName</key>
+			<string>DomeUnlockCer.cer</string>
+			<key>PayloadContent</key>
+			<data>
+			MIIC6TCCAdGgAwIBAgIBATANBgkqhkiG9w0BAQsFADAiMRMwEQYD
+			VQQDDApEb21lVW5sb2NrMQswCQYDVQQGEwJSVTAeFw0xOTA3MDYx
+			OTM2NDJaFw0yMDA3MDUxOTM2NDJaMCIxEzARBgNVBAMMCkRvbWVV
+			bmxvY2sxCzAJBgNVBAYTAlJVMIIBIjANBgkqhkiG9w0BAQEFAAOC
+			AQ8AMIIBCgKCAQEAwyblUhE3a8GlOMamQFIg37FbPqVlL7sT/j4o
+			xBrSeNHbJ08n5HyvfA6HcTDqPKF1gzuowknLE1lym3uUxq8tuO22
+			l2PJ9R+mhAfbDFB2+0OCvTnhgSQb9Ia95yLPoWr5fAsLi3rGTvzx
+			sF5GjmuPvDVSz2Hpos9CQdX86VlLagr8LC72Sk8ILU2wzoUKhKnL
+			XJD7712jPsoCkyzoqA4C27JAftBA/vtOYMr/pwtIo95RaKr/Z7M1
+			BuY06cv+tpj186ouynMn74Y1QQU2nfkIY5hynxU95RPIkMR5H9Mc
+			WjayTpOvB/rCkAX7q/NWs7HkTpyR1dq0lTqYFeDbjlPZRwIDAQAB
+			oyowKDAOBgNVHQ8BAf8EBAMCB4AwFgYDVR0lAQH/BAwwCgYIKwYB
+			BQUHAwMwDQYJKoZIhvcNAQELBQADggEBAH+8M+hbpPBQP0zPGXdN
+			NnFwEW3GjycW9gC1f0r2d/9gkWYTeicFDO6FS72/oQP5ZdJVM+x7
+			MgkI8ZxzjW2re7RIMtbi0sc7VZpKWyRUUUgm4poAEOnl+ZGkG4yp
+			sqKwjTbzcvgMdSzm5CFyhTIKfmvSWy8HgSksyTGPVqr0jas1DQ1Q
+			WtmQgqqcjqXlnd2CA9hfGJaGbBEFHAFmzIdvZp3RoUxbBWso3xFS
+			Lys6GMsfCn4qfOxatrq5JCjGJDKXP8Luqx9ZPrSrAXx+yMvotvzs
+			ylJ8bxm6igDVF8wRWNS699MrYXpvV82+O7Zr3eXEtkwUdUKo+JbL
+			vg4WwyX2Vpk=
+			</data>
+			<key>PayloadDescription</key>
+			<string>Adds a CA root certificate</string>
+			<key>PayloadDisplayName</key>
+			<string>DomeUnlock</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.security.root.22313300-8CD6-425F-A6AE-C1F57E0C5835</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.root</string>
+			<key>PayloadUUID</key>
+			<string>22313300-8CD6-425F-A6AE-C1F57E0C5835</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>IfLostReturnToMessage</key>
+			<string>Вы имеете доступ ко всему</string>
+			<key>PayloadDescription</key>
+			<string>Configures ownership information for a shared device</string>
+			<key>PayloadDisplayName</key>
+			<string>Lock Screen Message</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.shareddeviceconfiguration.D4CED5C7-661D-4A01-9703-3C5ABE318BE8</string>
+			<key>PayloadType</key>
+			<string>com.apple.shareddeviceconfiguration</string>
+			<key>PayloadUUID</key>
+			<string>D4CED5C7-661D-4A01-9703-3C5ABE318BE8</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Need for block and unblock applications</string>
+	<key>PayloadDisplayName</key>
+	<string>Dome Profile</string>
+	<key>PayloadIdentifier</key>
+	<string>MacBookEVHTD7.5FAB6927-E205-427D-B9E1-096364EAF937</string>
+	<key>PayloadOrganization</key>
+	<string>First</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>F5BA9576-C8DC-40BD-B71D-3A38ED6CEC09</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
